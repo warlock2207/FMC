@@ -16,7 +16,23 @@
             $('.login-form').remove();
         });
     });
+
 });
+//提交到后台登陆
+function login() {
+    var userName=$("#userName").val();
+    var password=$("#password").val();
+    $.ajax({
+        type: 'POST',
+        url: "/FMC/user/login.do",
+        dataType : "JSON",
+        data : {
+            'username' : userName,'userpwd' : password},
+    success : function (data) {
+            alert(1111);
+    }
+    });
+}
 
 </script>
 <!--SIGN UP-->
@@ -32,15 +48,16 @@
     <div class="avtar">
         <img src="resources/images/avtar.png" />
     </div>
-    <form>
-        <input type="text" class="text" value=""  >
+    <form action="/FMC/user/login.do" method="post">
+        <input id="userName" NAME="username" type="text" class="text" value=""  >
         <div class="key">
-            <input type="password" value="" >
+            <input id="password" name="userpwd" type="password" value="" >
+        </div>
+        <div class="signin">
+            <input type="submit" value="Login">
         </div>
     </form>
-    <div class="signin">
-        <input type="submit" value="Login" >
-    </div>
+
 </div>
 <div class="copy-rights">
     <p>Copyright &copy; 2015.Company name All rights reserved.More Templates - Collect from </p>
