@@ -1,29 +1,35 @@
-<!DOCTYPE html>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <html>
 <head>
+    <%
+        String path = request.getContextPath();
+        String basePath = request.getScheme() + "://"
+                + request.getServerName() + ":" + request.getServerPort()
+                + path + "/";
+    %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AdminLTE 3 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/resources/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/resources/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/dist/css/adminlte.min.css">
     <!-- iCheck -->
-    <link rel="stylesheet" href="/resources/plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="/resources/plugins/morris/morris.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/morris/morris.css">
     <!-- jvectormap -->
-    <link rel="stylesheet" href="/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="/resources/plugins/datepicker/datepicker3.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="/resources/plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/daterangepicker/daterangepicker-bs3.css">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -69,7 +75,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                            <img src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Brad Diesel
@@ -85,7 +91,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <img src="${pageContext.request.contextPath}/resources/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     John Pierce
@@ -101,7 +107,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                            <img src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Nora Silvester
@@ -156,17 +162,17 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            <img src="${pageContext.request.contextPath}/resources/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">AdminLTE 3</span>
         </a>
 
         <!-- Sidebar -->
         <div class="sidebar">
-            <!-- Sidebar user panel (optional) -->
+            <!-- Sidebar user panel (optional)-->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="${pageContext.request.contextPath}/resources/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">Alexander Pierce</a>
@@ -313,7 +319,7 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fa fa-table"></i>
                             <p>
-                                Tables
+                                列表
                                 <i class="fa fa-angle-left right"></i>
                             </p>
                         </a>
@@ -434,7 +440,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/examples/blank.html" class="nav-link">
+                                <a href="/pages/examples/blank.html" class="nav-link">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>Blank Page</p>
                                 </a>
@@ -627,7 +633,7 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             Is this template really for free? That's unbelievable!
@@ -643,7 +649,7 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             You better believe it!
@@ -659,7 +665,7 @@
                                             <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             Working with AdminLTE on a great new app! Wanna join?
@@ -675,7 +681,7 @@
                                             <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                                         </div>
                                         <!-- /.direct-chat-info -->
-                                        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image">
+                                        <img class="direct-chat-img" src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg" alt="message user image">
                                         <!-- /.direct-chat-img -->
                                         <div class="direct-chat-text">
                                             I would love to.
@@ -692,7 +698,7 @@
                                     <ul class="contacts-list">
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user1-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -707,7 +713,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user7-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user7-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -722,7 +728,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user3-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user3-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -737,7 +743,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user5-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user5-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -752,7 +758,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user6-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user6-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -767,7 +773,7 @@
                                         <!-- End Contact Item -->
                                         <li>
                                             <a href="#">
-                                                <img class="contacts-list-img" src="dist/img/user8-128x128.jpg">
+                                                <img class="contacts-list-img" src="${pageContext.request.contextPath}/resources/dist/img/user8-128x128.jpg">
 
                                                 <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -1084,7 +1090,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="/resources/plugins/jquery/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -1092,33 +1098,33 @@
     $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="/resources/plugins/morris/morris.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/morris/morris.min.js"></script>
 <!-- Sparkline -->
-<script src="/resources/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/sparkline/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="/resources/plugins/knob/jquery.knob.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/knob/jquery.knob.js"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-<script src="/resources/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
-<script src="/resources/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/datepicker/bootstrap-datepicker.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
-<script src="/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="/resources/plugins/fastclick/fastclick.js"></script>
+<script src="${pageContext.request.contextPath}/resources/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="/resources/dist/js/adminlte.js"></script>
+<script src="${pageContext.request.contextPath}/resources/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/resources/dist/js/pages/dashboard.js"></script>
+<script src="${pageContext.request.contextPath}/resources/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/resources/dist/js/demo.js"></script>
+<script src="${pageContext.request.contextPath}/resources/dist/js/demo.js"></script>
 </body>
 </html>
