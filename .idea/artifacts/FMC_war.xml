@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FMC:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="FMC.war">
+      <element id="artifact" artifact-name="FMC:war exploded" />
+    </root>
+  </artifact>
+</component>
