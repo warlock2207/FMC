@@ -176,7 +176,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/FMC/user/sysMenu.do" class="nav-link" target="menuFrame">
+                                <a href="/FMC/menu/initMenuPage.do" class="nav-link" target="menuFrame">
                                     <i class="fa fa-circle-o nav-icon"></i>
                                     <p>菜单管理</p>
                                 </a>
@@ -469,12 +469,12 @@
         <!-- /.content-header -->
 
         <!-- Main content -->
-        <section class="content">
+        <!--<section class="content">-->
             <!-- /.container-fluid -->
             <iframe scrolling="yes" frameborder="0"
                     style="width: 100%; min-height: 450px; overflow: visible; background: #fff;"
                     id="menuFrame" name="menuFrame" src=""></iframe>
-        </section>
+        <!--</section>-->
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->

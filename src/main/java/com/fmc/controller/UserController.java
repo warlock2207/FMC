@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -39,7 +38,7 @@ public class UserController {
 
     @RequestMapping(value="/login.do",method= RequestMethod.POST)
     public String login(User user,Model model) throws Exception {
-        user=userService.checkLogin(user.getUsername(), user.getUserpwd());
+        //user=userService.checkLogin(user.getUsername(), user.getUserpwd());
         if(user!=null){
             //model.addAttribute(user);
             return "index";
