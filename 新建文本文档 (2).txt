@@ -1,0 +1,15 @@
+请求头加token字段 56e7a1ce-5ca5-4a4d-9057-2321cfaef626
+
+/api/device/addOrUpdate  设备接口
+[{"Imei":"1295649998097379329","Index":"1295656899350708226","OnlineState":"2"},{"Imei":"2222","Index":"33333","OnlineState":"2"}]
+/api/device/deviceLog   加日志接口
+[{"Imei":"1295649998097379329","Time":"1295656899350708226","Msg":"333"},{"Imei":"2222","Time":"33333","Msg":"8888"}]
+/api/device//removeDevice 删除设备接口
+[{"Imei":"1295649998097379329"}]
+
+回复code 200成功 其他是失败
+
+需要调用接口cmd  都是传imei 
+删除接口 RemoveMobiles
+关闭接口 StopMobiles
+启动接口 StartMobiles
